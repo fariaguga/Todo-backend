@@ -1,6 +1,19 @@
 const { Task } = require('../models/');
 
 
+const getAllTasks = async (_req, res) => {
+  try {
+
+    const tasks = await Task.findAll();
+
+    return res.status(201).json(tasks);
+  } catch (e) {
+    console.log(e.message);
+    res.status(500).json({ message: 'Algo deu errado' });
+  }
+};
+
+
 const addTask = async (req, res) => {
   try {
     const { name, description } = req.body;
@@ -15,4 +28,5 @@ const addTask = async (req, res) => {
 
 module.exports = {
   addTask,
+  getAllTasks
 }; 

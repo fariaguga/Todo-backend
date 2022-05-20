@@ -6,6 +6,16 @@ module.exports = {
         name: 'Estudar',
         description: 'Lembrar de estudar e comer batata',
       },
+      {
+        id: 2,
+        name: 'Tocar',
+        description: 'Tirar 3 musicas para o repertorio',
+      },
+      {
+        id: 3,
+        name: 'Médico',
+        description: 'Endocrino as 3 PM',
+      },
       ], { timestamps: false });
   },
 
