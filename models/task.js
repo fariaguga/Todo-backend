@@ -10,11 +10,11 @@ const Attributes = {
 
   name: {
     type: DataTypes.STRING,
-    allowNull: false,
+    // allowNull: false,
   },
   description: {
     type: DataTypes.STRING,
-    allowNull: false,
+    // allowNull: false,
   },
 };
 
