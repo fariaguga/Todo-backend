@@ -6,6 +6,10 @@ const getAllTasks = async (_req, res) => {
 
     const tasks = await Task.findAll();
 
+    if(tasks.length === 0) {
+      res.status(400).json({ message: 'Banco de dados vazio' });
+    }
+
     return res.status(201).json(tasks);
   } catch (e) {
     console.log(e.message);
